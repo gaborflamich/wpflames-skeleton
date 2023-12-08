@@ -1,0 +1,63 @@
+// Hamburger Menu
+/************************************/
+@media (max-width: $breakpoint) {
+  header {
+    #toggle {
+      padding: 10px;
+      transition: 0.8s;
+      z-index: 9;
+      margin-right: 15px;
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      span {
+        position: relative;
+        width: 36px;
+        height: 4px;
+        background: var(--primary);
+        border-radius: 4px;
+        display: block;
+        margin-bottom: 8px;
+        transition: 0.5s;
+
+        &:nth-child(1) {
+          transform-origin: left;
+        }
+        &:nth-child(2) {
+          transform-origin: center;
+        }
+        &:nth-child(3) {
+          transform-origin: left;
+          margin-bottom: 0;
+        }
+      }
+
+      &.active {
+        width: 55px;
+        transition: 0.5s;
+        z-index: 9;
+        span {
+          background: var(--primary);
+        }
+        span:nth-child(1) {
+          transform: rotate(45deg);
+          left: 3px;
+        }
+        span:nth-child(2) {
+          transform: rotate(315deg);
+          right: 3px;
+        }
+        span:nth-child(3) {
+          opacity: 0;
+          transform: scale(0);
+        }
+      }
+    }
+    nav {
+      position: relative;
+    }
+  }
+  #toggle.active ul.menu {
+    transform: translateX(-10%);
+  }
+}

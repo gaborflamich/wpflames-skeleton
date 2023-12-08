@@ -1,0 +1,27 @@
+// @use "../../../assets/sass/abstracts/variables" as *;
+
+// Boxes
+/************************************/
+.boxes {
+    background: white;
+    position: relative;
+    z-index: 2; 
+    padding: 20px;
+}
+.box {
+    background: black;
+    color: white;
+    padding: 50px;
+    &-title {
+        font-weight: normal;
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    p.box-text {
+        font-size: 1.2rem !important;
+    }
+    &-link {
+        color: white;
+    }
+}
+  

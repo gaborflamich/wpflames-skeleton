@@ -1,0 +1,168 @@
+.desktop-menu {
+  display: none;
+  @include media-breakpoint-up(lg) {
+    display: block;
+    background: var(--primary);
+    padding: 20px;
+    .menu-primary-container {
+      max-width: 1400px;
+      display: block;
+      margin: auto;
+      padding: 0 30px;
+    }
+    &-list {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin: 0;
+      gap: 40px;
+      width: 100%;
+      li.menu-item {
+        font-size: 1.3rem;
+        font-weight: 500;
+        list-style: none;
+        position: relative;
+        &.menu-item-has-children {
+          position: relative;
+          &:hover .sub-menu-1 {
+            position: absolute;
+            left: 0px;
+            top: 45px;
+          }
+          .icon-chevron-down {
+            display: none;
+            min-width: 12px;
+            min-height: 12px;
+            top: 25px;
+            right: -22px;
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            margin-left: auto;
+          }
+          .sub-menu-1 {
+            background: var(--primary);
+            display: block;
+            box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 100%;
+            left: -999em;
+            z-index: 99999;
+            width: 220px;
+            li.menu-item {
+              position: relative;
+              a {
+                font-weight: 500;
+                display: block;
+                font-size: 1.1rem;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+                color: var(--white);
+                padding: 10px;
+                &:hover {
+                  color: var(--secondary);
+                }
+              }
+            }
+            a {
+              padding: 20px 0;
+            }
+            li.menu-item-has-children {
+              position: relative;
+              .sub-menu-2 {
+                position: absolute;
+                left: -100%;
+                opacity: 0;
+              }
+              &:hover {
+                .sub-menu-2 {
+                  left: 188px;
+                  top: 0;
+                  opacity: 1;
+                  background: var(--primary);
+                }
+              }
+            }
+            &.current-menu-item {
+              a {
+                color: var(--secondary);
+              }
+              ul.sub-menu-2 {
+                a {
+                  color: var(--secondary);
+                }
+                li.menu-item-has-children {
+                  position: relative;
+                }
+              }
+            }
+
+            ul.sub-menu-1 {
+              background: var(--primary);
+              display: block;
+              box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+              position: absolute;
+              top: 100%;
+              left: -999em;
+              z-index: 99999;
+              width: 220px;
+              li.menu-item {
+                position: relative;
+                a {
+                  font-weight: 500;
+                  display: block;
+                  font-size: 1.1rem;
+                  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+                  color: var(--white);
+                  padding: 10px;
+                  &:hover {
+                    color: var(--secondary);
+                  }
+                }
+              }
+            }
+            @media (min-width: $lg) {
+              margin: 0;
+            }
+            &:hover > ul,
+            .primary-menu ul li.focus > ul {
+              @media (min-width: $breakpoint) {
+                left: 0;
+                margin-left: 0;
+                top: 40px;
+              }
+            }
+          }
+        }
+        a {
+          color: var(--white);
+          padding: 20px 15px;
+          position: relative;
+          font-weight: 600;
+          cursor: pointer;
+          padding: 20px 0;
+          text-decoration: none;
+          transition: $ease;
+          &:after {
+            transition: all 0.5s;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 0%;
+            content: '.';
+            color: transparent;
+            background: var(--secondary);
+            height: 2px;
+          }
+          &:hover {
+            color: var(--secondary);
+          }
+          &:hover:after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

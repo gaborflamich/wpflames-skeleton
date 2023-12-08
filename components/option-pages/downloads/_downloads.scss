@@ -1,0 +1,32 @@
+.page.dokumentumok .site {
+  background: var(--green-light);
+}
+.download {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  border-bottom: 1px solid var(--grey-900);
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: $ease;
+  box-shadow: var(--shadow-1);
+  margin-bottom: 30px;
+  background: var(--grey-900);
+  color: var(--white) !important;
+  border-radius: 5px;
+  &:hover {
+    background: var(--primary);
+  }
+  &-wrapper {
+    max-width: 800px;
+    margin: auto;
+  }
+  &:first-child {
+    border-top: 1px solid var(--grey-900);
+    padding-top: 10px;
+  }
+  &-text {
+    font-weight: 600;
+    font-size: clamp(18px, 2.5vw, 22px);
+  }
+}

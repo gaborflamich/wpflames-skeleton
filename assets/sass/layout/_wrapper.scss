@@ -1,0 +1,13 @@
+.section,
+section {
+  .standard-wrapper,
+  > .wrapper {
+    width: 1400px;
+    margin-inline: auto;
+    max-width: calc(100% - 30px);
+
+    &.wrapper-full-width {
+      max-width: 100%;
+    }
+  }
+}

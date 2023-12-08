@@ -1,0 +1,31 @@
+$font-primary: 'Barlow', sans-serif;
+$font-secondary: 'Barlow Condensed', sans-serif;
+
+$primary: #002838;
+$secondary: #0ecad4;
+
+$white: #ffffff;
+$black: #000000;
+
+$shadow: 0 13px 27px -5px hsla(240, 30.1%, 28%, 0.25),
+  0 8px 16px -8px hsla(0, 0%, 0%, 0.3), 0 -6px 16px -6px hsla(0, 0%, 0%, 0.03);
+$shadow-2: 0 20px 27px -5px hsla(240, 30.1%, 28%, 0.25),
+  0 8px 16px -8px hsla(0, 0%, 0%, 0.5), 0 -6px 16px -6px hsla(0, 0%, 0%, 0.05);
+$ease: all 0.3s ease;
+
+$grey-100: #f0f0f0;
+$grey-200: #e1e1e1;
+$grey-300: #d3d2d2;
+$grey-400: #c3c2c2;
+$grey-500: #b3b2b2;
+$grey-600: #9f9d9d;
+$grey-700: #8e8e8e;
+$grey-800: #7c7c7c;
+$grey-900: #121217;
+
+$orange: #f39200;
+$orange-2: #f8d9be;
+
+$color-sky: linear-gradient(to right, #cfdef3, #e0eafc);
+
+$breakpoint: 1130px;

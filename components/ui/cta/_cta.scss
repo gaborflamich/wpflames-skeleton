@@ -1,0 +1,27 @@
+.button{
+    &-cta {
+        background: orange;
+        padding: 20px;
+        position: relative;
+        border-radius: 35px;
+        text-decoration: none;
+        color: white;
+        font-size: 1.4rem;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        &:hover{
+            transition: all 0.3s ease-in-out;
+            color: white;
+            background: tomato;
+        }
+        &-arrow{
+            width: 50px;
+            position: relative;
+            top: 16px;
+            left: 10px;
+        }
+        &:visited{
+            color: white;
+        }
+    }
+}

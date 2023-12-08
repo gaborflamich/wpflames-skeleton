@@ -1,0 +1,49 @@
+.navigation.pagination .nav-links {
+	display: flex;
+	justify-content: space-between;
+    width: 280px;
+    margin: 30px 0 60px;
+    .page-numbers {
+        border: 1px solid white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 30px;
+        height: 30px;
+        @media (min-width: $md) {
+            width: 50px;
+            height: 50px;
+        }
+    }
+    a.page-numbers{
+        text-decoration: none;
+        color: white;
+        &:hover{
+            border-color: tomato;
+            color: tomato;
+        }
+    }
+    .page-numbers.current {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: $orange;
+        border-color: $orange;
+    }
+    .next.page-numbers {
+        width: 160px !important;
+        color: white;
+    }
+    .prev.page-numbers{
+        width: 160px !important;
+        color: white;
+    }
+}
+
+.post-type-archive-eredmenyek{
+    .navigation.pagination .nav-links {
+        width: 100%;
+    }
+}

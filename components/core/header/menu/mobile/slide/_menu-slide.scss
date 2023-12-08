@@ -1,0 +1,86 @@
+.sliding-menu-container {
+  position: absolute;
+  width: 300px;
+  height: 100vh;
+  background: var(--primary);
+  left: -100%;
+  transition: all 0.4s ease-in-out;
+  z-index: 9;
+  .icon.icon-chevron-down {
+    display: none;
+  }
+  &.active {
+    left: 0;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary);
+  }
+  a {
+    text-decoration: none;
+    display: block;
+    padding: 1em 1em 1em 1.2em;
+    outline: none;
+    color: #f3efe0;
+    text-transform: uppercase;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.1);
+    letter-spacing: 1px;
+    font-weight: 400;
+    border-bottom: 1px solid var(--white);
+  }
+  ul li {
+    color: #333;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: var(--primary);
+  }
+  ul li a:hover {
+    background-color: var(--secondary) !important;
+    color: var(--black);
+  }
+  ul#layer3 li a:hover {
+    background-color: var(--secondary);
+    color: var(--black);
+  }
+  li span {
+    font-size: 1.5em;
+    line-height: 0.25em;
+  }
+  .hide {
+    margin-left: -300px;
+    transition: all 0.8s ease;
+  }
+
+  .sub-menu {
+    position: absolute;
+    top: 0px;
+    background: #eeeeee;
+    color: white;
+    width: 299px;
+    height: 100vh;
+    background: transparent;
+    background-color: var(--primary);
+  }
+
+  .sub-menu ul li a {
+    background-color: var(--primary);
+  }
+  .sub-menu:last-child ul li a {
+    background-color: var(--primary);
+  }
+  .show-menu {
+    margin-left: 0 !important;
+  }
+  .back-link {
+    background: black !important;
+    color: white;
+    cursor: pointer;
+    border: none;
+    text-align: left;
+    text-transform: capitalize;
+    width: 100%;
+    padding: 20px;
+  }
+}

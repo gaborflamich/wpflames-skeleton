@@ -1,0 +1,55 @@
+.icon {
+  display: inline-block;
+  min-width: 5px;
+  min-height: 5px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.icon.icon-print {
+  background-image: url('../icons/print.svg');
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.icon.icon-cart {
+  background-image: url('../icons/cart.svg');
+  min-width: 20px;
+  min-height: 20px;
+}
+.icon.icon-facebook {
+  background-image: url('../icons/social/facebook.svg');
+  min-width: 20px;
+  min-height: 20px;
+}
+.icon.icon-twitter {
+  background-image: url('../icons/social/twitter.svg');
+  min-width: 20px;
+  min-height: 20px;
+}
+.icon.icon-instagram {
+  background-image: url('../icons/social/instagram.svg');
+  min-width: 20px;
+  min-height: 20px;
+}
+.icon.icon-envelope {
+  background-image: url('../icons/social/envelope.svg');
+  min-width: 20px;
+  min-height: 20px;
+}
+.icon.icon-phone {
+  background-image: url('../icons/social/phone.svg');
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.menu-item.icon-fb {
+  position: relative;
+  top: 3px;
+}
+.icon.icon-chevron-down {
+  background-image: url('../icons/chevron-down.svg');
+  min-width: 20px;
+  min-height: 20px;
+}

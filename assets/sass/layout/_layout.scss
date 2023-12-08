@@ -1,0 +1,22 @@
+.wrap {
+  @include wrap;
+}
+.content {
+  position: relative;
+  max-width: 780px;
+}
+@media (min-width: 960px) {
+  .content-sidebar-wrap{
+    .content {
+      width: 65%;
+      margin-right: 5%;
+      clear: both;
+    }
+    .sidebar {
+      width: 35%;
+    }
+  }
+}
+.container{
+  margin-bottom: 50px;
+}
