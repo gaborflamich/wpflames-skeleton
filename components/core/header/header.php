@@ -4,7 +4,7 @@
             <span class="site-header-top-customer-service-txt">Top Bar </span>
         </div>
         <div class="site-header-top-nav">
-            <?php secondary_menu(); ?>
+            <?php wpflames_header_top() ?>
         </div>
     </div>
 </div>
@@ -15,9 +15,11 @@
                 <img class="site-header-branding-logo" src="<?php theme_url(); ?>/assets/images/logo.svg" alt="Logo">
             </a>
         </div>
-        <?php toggle() ?>
+        <div class="site-header-right">
+            <?php wpflames_header_right() ?>
+        </div>
     </div>
 </header>
-
-<?php menu_slide() ?>
-<?php desktop_menu() ?>
+<div class="after-header">
+    <?php wpflames_after_header() ?>
+</div>

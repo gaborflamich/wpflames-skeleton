@@ -18,7 +18,7 @@ require_once get_theme_file_path('inc/enqueue.php');
 // =============================================================
 // Menu Init
 // =============================================================
-// require_once get_theme_file_path('components/core/header/menu/menu-init.php');
+require_once get_theme_file_path('components/core/header/menu/menu-init.php');
 
 // =============================================================
 // Add Page Slug to Body Class

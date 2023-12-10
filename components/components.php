@@ -11,21 +11,6 @@ function display_header(){ require get_theme_file_path('components/core/header/h
 function display_footer(){ require get_theme_file_path('components/core/footer/footer.php'); }
 function display_sidebar(){ require get_theme_file_path('components/core/sidebar/sidebar.php'); }
 
-// =============================================================
-// Desktop Menu
-// =============================================================
-function desktop_menu(){ require get_theme_file_path('components/core/header/menu/desktop/desktop.php'); }
-
-// =============================================================
-// Mobile Menu
-// =============================================================
-function menu_slide(){ require get_theme_file_path('components/core/header/menu/mobile/slide/menu-slide.php'); }
-
-// =============================================================
-// Toggle Menu
-// =============================================================
-function toggle(){ require get_theme_file_path('components/core/header/menu/mobile/toggle/toggle.php'); }
-
 function breadcrumbs(){ require get_theme_file_path('components/core/breadcrumbs/breadcrumbs.php'); }
 function pagination(){ require get_theme_file_path('components/core/pagination/pagination.php'); }
 function cover(){ require get_theme_file_path('components/core/cover/cover.php'); }
@@ -43,6 +28,3 @@ function icon_twitter(){ require get_theme_file_path('components/icons/social/tw
 function icon_instagram(){ require get_theme_file_path('components/icons/social/instagram.php'); }
 function icon_phone(){ require get_theme_file_path('components/icons/social/phone.php'); }
 function icon_envelope(){ require get_theme_file_path('components/icons/social/envelope.php'); }
-
-// Shortcodes
-// require get_theme_file_path('componetnts/shortcodes.php');

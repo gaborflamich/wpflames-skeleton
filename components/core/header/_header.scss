@@ -5,113 +5,21 @@
 // Site Header
 /************************************/
 .site-header {
-  font-family: var(--font-primary);
-  // Mobile menu
-  .site-header-navigation {
-    display: flex;
-    @media (min-width: $lg) {
-      display: none;
-    }
-  }
-  // Desktop menu
-  .menu-desktop-menu-container {
-    display: none;
-    @media (min-width: $lg) {
-      display: flex;
-      align-items: center;
-      margin-right: 30px;
-    }
-    .desktop-menu {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      margin: 0;
-      width: 100%;
-      .menu-item {
-        font-size: 1.2rem;
-        font-weight: 500;
-        list-style: none;
-        margin: 0 20px;
-        a {
-          color: black;
-          cursor: pointer;
-          padding: 20px 0;
-          text-decoration: none;
-          transition: $ease;
-          &:hover {
-            color: var(--primary);
-          }
-        }
-      }
-    }
-  }
   &-top {
-    padding: 10px;
-    background: var(--secondary);
     display: none;
     @media (min-width: 1180px) {
       display: block;
     }
     &-wrap {
-      padding: 0 35px 0 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin: auto;
       max-width: 1400px;
     }
-    &-customer-service {
-      color: white;
-      &-txt {
-        display: none;
-        @media (min-width: 1180px) {
-          display: inline-block;
-        }
-      }
-      &-link {
-        color: white;
-      }
+    .desktop-menu {
+      padding: 10px;
     }
-    &-nav {
-      color: var(--primary);
-      display: flex;
-      align-items: center;
-      &-list {
-        margin: 0;
-        display: flex;
-        justify-content: flex-end;
-        .menu-item {
-          list-style: none;
-          border-right: 1px solid var(--black);
-          &:last-child {
-            border: none;
-          }
-          a {
-            padding: 17px;
-            text-decoration: none;
-            color: var(--white);
-            transition: $ease;
-            &:hover {
-              color: var(--white);
-            }
-            &:visited {
-              color: transparent;
-            }
-          }
-        }
-      }
-      &-link {
-        color: var(--primary);
-        text-decoration: none;
-        color: white;
-      }
-    }
-  }
-  &-main {
-    display: flex;
-    justify-content: space-between;
-    @include wrap;
-    margin: 20px 0;
   }
   &-wrap {
     display: flex;
@@ -136,75 +44,16 @@
       margin: 10px 0;
     }
   }
+}
 
-  #site-navigation {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: auto;
+.after-header {
+  background: var(--primary);
+  .desktop-menu {
     max-width: 1400px;
-    text-transform: none;
-    ul#menu {
-      display: flex;
-      li.menu-item {
-        @media (min-width: $lg) {
-          margin: 0;
-        }
-        a {
-          color: black;
-          padding: 20px 15px;
-          position: relative;
-          transition: all 0.5s;
-          font-weight: 600;
-          &:after {
-            transition: all 0.5s;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
-            width: 0%;
-            content: '.';
-            color: transparent;
-            background: var(--secondary);
-            height: 2px;
-          }
-          &:hover {
-            color: var(--secondary);
-          }
-          &:hover:after {
-            width: 100%;
-          }
-        }
-        ul.sub-menu {
-          li {
-            margin: 0 10px;
-          }
-        }
-        &.current-menu-item {
-          a {
-            color: black;
-          }
-          ul.sub-menu {
-            a {
-              color: black;
-            }
-          }
-        }
-      }
-      ul.sub-menu {
-        background: $grey-100;
-        display: block;
-        li {
-          position: relative;
-          a {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-            color: black;
-            padding: 10px 0;
-            font-weight: 300;
-          }
-        }
-      }
+    margin: auto;
+    padding-left: 0;
+    &-list {
+      justify-content: space-between;
     }
   }
 }

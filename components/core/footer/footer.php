@@ -30,11 +30,6 @@
                         Lorem ipsum sit amet
                     </a>
                 </li>
-                <li class="site-footer-list-item">
-                    <a class="site-footer-list-item-link" href="#">
-                        Lorem ipsum sit amet
-                    </a>
-                </li>
             </ul>
         </div>
         <div class="site-footer-column">
@@ -55,21 +50,11 @@
                         Lorem ipsum sit amet
                     </a>
                 </li>
-                <li class="site-footer-list-item">
-                    <a class="site-footer-list-item-link" href="#">
-                        Lorem ipsum sit amet
-                    </a>
-                </li>
             </ul>
         </div>
         <div class="site-footer-column">
             <h4 class="site-footer-title">Information</h4>
             <ul class="site-footer-list">
-                <li class="site-footer-list-item">
-                    <a class="site-footer-list-item-link" href="#">
-                        Lorem ipsum sit amet
-                    </a>
-                </li>
                 <li class="site-footer-list-item">
                     <a class="site-footer-list-item-link" href="#">
                         Lorem ipsum sit amet
