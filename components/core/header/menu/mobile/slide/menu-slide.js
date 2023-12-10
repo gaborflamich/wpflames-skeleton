@@ -15,12 +15,20 @@ document.querySelectorAll('.l1').forEach(function (elem) {
     if (depth === 1) {
       // Eltávolítjuk a 'show-menu' class-t a 'layer2' ID-jű elemről
       var layer2_1 = document.getElementById('layer2-1');
+      var layer2_2 = document.getElementById('layer2-2');
       var layer2_3 = document.getElementById('layer2-3');
+      var layer2_4 = document.getElementById('layer2-4');
       if (layer2_1) {
         layer2_1.classList.remove('show-menu');
       }
+      if (layer2_2) {
+        layer2_2.classList.remove('show-menu');
+      }
       if (layer2_3) {
         layer2_3.classList.remove('show-menu');
+      }
+      if (layer2_4) {
+        layer2_4.classList.remove('show-menu');
       }
     }
 

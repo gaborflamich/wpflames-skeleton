@@ -19,5 +19,5 @@
     </div>
 </header>
 
-<?php menu_slide()?>
-<?php desktop_menu()?>
+<?php menu_slide() ?>
+<?php desktop_menu() ?>

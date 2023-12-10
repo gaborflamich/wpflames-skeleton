@@ -5,7 +5,7 @@
  * Description:  Adds a Lightbox to the Block Editor (Gutenberg) Gallery & Image Block.
  * Author:       Johannes Kinast <johannes@travel-dealz.de>
  * Author URI:   https://go-around.de
- * Version:     1.12
+ * Version:     1.13
  */
 namespace Gallery_Block_Lightbox;
 
@@ -20,7 +20,7 @@ function register_assets() {
 	 *
 	 * @param string  $value  The CSS selector to a gallery (or galleries) containing a tags
 	 */
-	$baguettebox_selector = apply_filters( 'baguettebox_selector', '.wp-block-gallery,:not(.wp-block-gallery)>.wp-block-image,.wp-block-media-text__media,.gallery,.wp-block-coblocks-gallery-masonry,.wp-block-coblocks-gallery-stacked,.wp-block-coblocks-gallery-collage,.wp-block-coblocks-gallery-offset,.wp-block-coblocks-gallery-stacked,.mgl-gallery' );
+	$baguettebox_selector = apply_filters( 'baguettebox_selector', '.wp-block-gallery,:not(.wp-block-gallery)>.wp-block-image,.wp-block-media-text__media,.gallery,.wp-block-coblocks-gallery-masonry,.wp-block-coblocks-gallery-stacked,.wp-block-coblocks-gallery-collage,.wp-block-coblocks-gallery-offset,.wp-block-coblocks-gallery-stacked,.mgl-gallery,.gb-block-image' );
 
 	/**
 	 * Filters the image files filter of baguetteBox.js
@@ -45,21 +45,23 @@ function enqueue_assets() {
 	 *
 	 * @param bool  $value  Whether baguettebox assets have to be enqueued.
 	 */
-	// $baguettebox_enqueue_assets = apply_filters( 'baguettebox_enqueue_assets',
-	// 	has_block( 'core/gallery' ) ||
-	// 	has_block( 'core/image' ) ||
-	// 	has_block( 'core/media-text' ) ||
-	// 	get_post_gallery() ||
-	// 	has_block( 'coblocks/gallery-masonry' ) ||
-	// 	has_block( 'coblocks/gallery-stacked' ) ||
-	// 	has_block( 'coblocks/gallery-collage' ) ||
-	// 	has_block( 'coblocks/gallery-offset' ) ||
-	// 	has_block( 'coblocks/gallery-stacked' )
-	// );
+	$baguettebox_enqueue_assets = apply_filters( 'baguettebox_enqueue_assets',
+		has_block( 'core/gallery' ) ||
+		has_block( 'core/image' ) ||
+		has_block( 'core/media-text' ) ||
+		get_post_gallery() ||
+		has_block( 'coblocks/gallery-masonry' ) ||
+		has_block( 'coblocks/gallery-stacked' ) ||
+		has_block( 'coblocks/gallery-collage' ) ||
+		has_block( 'coblocks/gallery-offset' ) ||
+		has_block( 'coblocks/gallery-stacked' ) ||
+		has_block( 'meow-gallery/gallery' ) ||
+		has_block( 'generateblocks/image' )
+	);
 
+	if ( $baguettebox_enqueue_assets ) {
 		wp_enqueue_script( 'baguettebox' );
 		wp_enqueue_style( 'baguettebox-css' );
+	}
 }
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_assets' );
-
-

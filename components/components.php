@@ -10,12 +10,20 @@ function theme_url(){ echo get_stylesheet_directory_uri(); }
 function display_header(){ require get_theme_file_path('components/core/header/header.php'); }
 function display_footer(){ require get_theme_file_path('components/core/footer/footer.php'); }
 function display_sidebar(){ require get_theme_file_path('components/core/sidebar/sidebar.php'); }
-function home(){ require get_theme_file_path('templates/home/home.php'); }
 
-function mobile_menu(){ require get_theme_file_path('components/core/header/menu/menu-mobile.php'); }
-function secondary_menu(){ require get_theme_file_path('components/core/header/menu/top/menu-secondary.php'); }
+// =============================================================
+// Desktop Menu
+// =============================================================
 function desktop_menu(){ require get_theme_file_path('components/core/header/menu/desktop/desktop.php'); }
+
+// =============================================================
+// Mobile Menu
+// =============================================================
 function menu_slide(){ require get_theme_file_path('components/core/header/menu/mobile/slide/menu-slide.php'); }
+
+// =============================================================
+// Toggle Menu
+// =============================================================
 function toggle(){ require get_theme_file_path('components/core/header/menu/mobile/toggle/toggle.php'); }
 
 function breadcrumbs(){ require get_theme_file_path('components/core/breadcrumbs/breadcrumbs.php'); }

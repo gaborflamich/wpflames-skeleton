@@ -18,18 +18,3 @@ function parent_menu_dropdown( $item_output, $item, $depth, $args ) {
     return $item_output;
 }
 add_filter( 'walker_nav_menu_start_el', 'parent_menu_dropdown', 10, 4 );
-
-
-// =========================================================================
-// Add chevron to sub menu
-// =========================================================================
-function parent_menu_dropdown_desktop( $item_output, $item, $depth, $args ) {
-    
-    if ( is_nav_menu( 'Primary' ) && ! empty( $item->classes ) && in_array( 'menu-item-has-children', $item->classes ) ) {
-        return $item_output . '<i class="icon icon-chevron-down"></i>';
-    }
-    
-    return $item_output;
-}
-add_filter( 'walker_nav_menu_start_el', 'parent_menu_dropdown_desktop', 10, 4 );
-remove_filter( 'walker_nav_menu_start_el', 'parent_menu_dropdown_desktop', 10, 4 );

@@ -22,19 +22,6 @@
                         $output .= "\n$indent<ul class=\"sub-menu hide layer2\" id=\"$submenuId\">\n";
                         $output .= "<li><button class='nav-link l1 back-link' value='2' id='l2'>← Back</button></li>\n";
                     }
-                    // if ($depth === 0) {
-                    //     // Főmenü (első szint) esetén
-                    //     $output .= "\n$indent<ul class=\"$submenu_class\" id=\"layer2\">\n";
-                    //     $output .= "<li><button class='nav-link l1 back-link' value='0' id='l2'>← Back</button></li>\n";
-                    // } elseif ($depth === 1) {
-                    //     // Második szintű menü esetén
-                    //     $output .= "\n$indent<ul class=\"$submenu_class\" id=\"layer3\">\n";
-                    //     $output .= "<li><button class='nav-link l1 back-link' value='1' id='l2'>← Back</button></li>\n";
-                    // } elseif ($depth === 2){
-                    //     // Harmadik szint esetén
-                    //     $output .= "\n$indent<ul class=\"$submenu_class\">\n";
-                    //     $output .= "<li><button class='nav-link l1 back-link' value='2' id='l2'>← Back</button></li>\n";
-                    // }
                 }
 
                 function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
